@@ -1,6 +1,16 @@
 export default [
   {
     id: 'q1',
+    text: 'What is her name?',
+    answers: [
+      'Ipsita',
+      'Khyati',
+      'lil wayne',
+      'Jyoti Malhotra',
+    ],
+  },
+  {
+    id: 'q2',
     text: 'What is her age?',
     answers: [
       '19',
@@ -10,7 +20,7 @@ export default [
     ],
   },
   {
-    id: 'q2',
+    id: 'q3',
     text: "What's her favourite beverage?",
     answers: [
       'Coffee',
@@ -20,7 +30,7 @@ export default [
     ],
   },
   {
-    id: 'q3',
+    id: 'q4',
     text: "What's her favourite colour?",
     answers: [
       'Teal',
@@ -30,7 +40,7 @@ export default [
     ],
   },
   {
-    id: 'q4',
+    id: 'q5',
     text: 'oh god m tired , what else can i ask?',
     answers: [
       'Nothing , u r perfect',
@@ -40,7 +50,7 @@ export default [
     ],
   },
   {
-    id: 'q5',
+    id: 'q6',
     text: "ok , i'll think of some questions",
     answers: [
       'you go girll',
@@ -50,7 +60,7 @@ export default [
     ],
   },
   {
-    id: 'q6',
+    id: 'q7',
     text: 'ok help me , what do i make this quiz about?',
     answers: [
       "i'll dm u",
@@ -60,7 +70,7 @@ export default [
     ],
   },
   {
-    id: 'q7',
+    id: 'q8',
     text: 'ok this comes to an end , bubye ',
     answers: [
       'bye',
