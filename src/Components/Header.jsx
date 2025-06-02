@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <img src={logoImg} alt="Quiz logo" />
-      <h1>How well do you know Ipsita?</h1>
+      <h1>Do You Speak Fluent JavaScript?</h1>
     </header>
   );
 }

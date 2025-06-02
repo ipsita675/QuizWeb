@@ -1,5 +1,5 @@
 import quizCompleteImg from '../assets/quiz-complete.png';
-import QUESTIONS from '../questions.js';
+import QUESTIONS from '../Questions.js';
 
 export default function Summary({ userAnswers }) {
   const skippedAnswers = userAnswers.filter((answer) => answer === null);
@@ -17,7 +17,7 @@ export default function Summary({ userAnswers }) {
 
   return (
     <div id="summary">
-      <img src={quizCompleteImg} alt="Trophy icon" />
+      <img src={quizCompleteImg} />
       <h2>Quiz Completed!</h2>
       <div id="summary-stats">
         <p>
@@ -35,11 +35,12 @@ export default function Summary({ userAnswers }) {
       </div>
       <ol>
         {userAnswers.map((answer, index) => {
+          const question = QUESTIONS[index];
           let cssClass = 'user-answer';
 
           if (answer === null) {
             cssClass += ' skipped';
-          } else if (answer === QUESTIONS[index].answers[0]) {
+          } else if (answer === question.answers[0]) {
             cssClass += ' correct';
           } else {
             cssClass += ' wrong';
@@ -48,8 +49,9 @@ export default function Summary({ userAnswers }) {
           return (
             <li key={index}>
               <h3>{index + 1}</h3>
-              <p className="question">{QUESTIONS[index].text}</p>
+              <p className="question">{question.text}</p>
               <p className={cssClass}>{answer ?? 'Skipped'}</p>
+              <p className="explanation"><strong>Why?</strong> {question.Explanation}</p>
             </li>
           );
         })}
