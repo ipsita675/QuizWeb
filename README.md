@@ -16,7 +16,8 @@
 
 ## Demo
 
-[Try Brain Blush here!]([https://ipsita675.github.io/QuizWeb/])
+Try Brain Blush here!   
+https://ipsita675.github.io/QuizWeb/
 
 ---
 
