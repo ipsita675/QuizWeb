@@ -339,3 +339,68 @@ header h1 {
   color: #aa0077;
   margin-top: 0.25rem;
 }
+
+
+@media (max-width: 600px) {
+  summary {
+    max-width: 90vw;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  #summary h2 {
+    font-size: 2rem;
+  }
+
+  #summary img {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #summary ol {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  #summary li {
+    margin: 1.2rem 0;
+  }
+
+  #summary h3 {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  #summary .question {
+    font-size: 0.9rem;
+  }
+
+  #summary .user-answer {
+    font-size: 0.9rem;
+  }
+
+  #summary-stats {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin: 1rem auto 2rem;
+    padding-bottom: 1rem;
+  }
+
+  #summary-stats .number {
+    font-size: 2rem;
+  }
+
+  #summary-stats .text {
+    font-size: 0.75rem;
+    margin-top: -0.5rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .explanation {
+    font-size: 0.85rem;
+  }
+}
+
