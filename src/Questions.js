@@ -25,9 +25,9 @@ export default [
     id: 'q3',
     text: "What does typeof(null) return?",
     answers: [
+      'object',
       'null',
       'undefined',
-      'object',
       'nothing',
     ],
     Explanation: 'JS bug from 1995, still alive 💀'

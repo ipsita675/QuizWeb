@@ -1,5 +1,5 @@
-import quizCompleteImg from '../assets/quiz-complete.png';
-import QUESTIONS from '../Questions.js';
+import quizCompleteImg from "../assets/quiz-complete.png";
+import QUESTIONS from "../Questions.js";
 
 export default function Summary({ userAnswers }) {
   const skippedAnswers = userAnswers.filter((answer) => answer === null);
@@ -36,22 +36,29 @@ export default function Summary({ userAnswers }) {
       <ol>
         {userAnswers.map((answer, index) => {
           const question = QUESTIONS[index];
-          let cssClass = 'user-answer';
+          let cssClass = "user-answer";
 
           if (answer === null) {
-            cssClass += ' skipped';
+            cssClass += " skipped";
           } else if (answer === question.answers[0]) {
-            cssClass += ' correct';
+            cssClass += " correct";
           } else {
-            cssClass += ' wrong';
+            cssClass += " wrong";
           }
 
           return (
             <li key={index}>
               <h3>{index + 1}</h3>
               <p className="question">{question.text}</p>
-              <p className={cssClass}>{answer ?? 'Skipped'}</p>
-              <p className="explanation"><strong>Why?</strong> {question.Explanation}</p>
+              <p className={cssClass}>{answer ?? "Skipped"}</p>
+              {answer !== null && answer !== question.answers[0] && (
+                <p className="correct">
+                  <strong>Correct answer:</strong> {question.answers[0]}
+                </p>
+              )}
+              <p className="explanation">
+                <strong>Why?</strong> {question.Explanation}
+              </p>
             </li>
           );
         })}
